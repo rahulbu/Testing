@@ -30,7 +30,7 @@ class CreditCardValidator{
     }
     public boolean validate(){
         int len = getLength();
-        if(len >= 13 && len <=16){
+        if(len >= 13 && len <=16){ /* default credit card number lengths */
             if(((sumOfEvenPlaces() + sumOfOddPlaces()))%10 !=0 ){
                 return false;
             }
@@ -42,6 +42,7 @@ class CreditCardValidator{
     public static void main(String[] args) {
         
         CreditCardValidator card ;
+        
         long cardNumbers[] = {79927398713L, 4388576018402626L, 89076543212345L, 5196081888500645L, 4388576018402626L};
 
         for(long num : cardNumbers){
